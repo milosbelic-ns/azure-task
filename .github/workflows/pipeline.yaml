@@ -62,10 +62,4 @@ jobs:
     # 7. Deploy to AKS with Helm
     - name: Deploy to AKS
       run: |
-        helm upgrade --install ${{ env.APP_NAME }} ./helm/hello-world \
-          --set image.repository=${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.APP_NAME }} \
-          --set image.tag=${{ github.sha }} \
-          --namespace default \
-          --create-namespace \
-          --atomic \
-          --timeout 5m
+        helm upgrade --install ${{ env.APP_NAME }} ./helm \
