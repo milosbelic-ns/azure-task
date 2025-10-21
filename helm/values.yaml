@@ -36,3 +36,8 @@ autoscaling:
   minReplicas: 1
   maxReplicas: 5
   targetCPUUtilizationPercentage: 50
+
+acr:
+  server: "acrmilos.azurecr.io"
+  username: "acrmilos" 
+  password: ""
