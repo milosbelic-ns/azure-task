@@ -63,3 +63,9 @@ jobs:
     - name: Deploy to AKS
       run: |
         helm upgrade --install ${{ env.APP_NAME }} ./helm \
+          --set image.repository=${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.APP_NAME }} \
+          --set image.tag=latest \
+          --namespace default \
+          --create-namespace \
+          --atomic \
+          --timeout 5m
