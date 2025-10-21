@@ -1,4 +1,4 @@
-# azure-devops-task# DevOps Assignment - Complete Setup
+DevOps Assignment - Complete Setup
 
 End-to-end DevOps pipeline on Azure with AKS, Terraform, Helm, and CI/CD.
 
@@ -6,8 +6,7 @@ End-to-end DevOps pipeline on Azure with AKS, Terraform, Helm, and CI/CD.
 ### 1. GitHub Secrets
 Add these to repository secrets:
 - `AZURE_CLIENT_ID`, `AZURE_CLIENT_SECRET`, `AZURE_TENANT_ID`, `AZURE_SUBSCRIPTION_ID`
-- `ACR_PASSWORD` (from `az acr credential show --name acrmilos`)
-
+- `ACR_PASSWORD`
 ### 2. Run Infrastructure
 - Go to GitHub Actions → "Terraform Apply" → Run workflow
 - Creates: AKS cluster, ACR, Storage Account
